@@ -1,0 +1,59 @@
+void main() {
+  // Function to sum two numbers
+  int sumNumbers(int num1, int num2) => num1 + num2;
+
+  // Using the sumNumbers function
+  print("Sum of 5 and 10 is: ${sumNumbers(5, 10)}");
+
+  // Using a for loop to print numbers from 1 to 10
+  print("Numbers from 1 to 10:");
+  for (int i = 1; i <= 10; i++) {
+    print(i);
+  }
+
+  // Using a switch statement to check for different string values
+  String value = "case2";
+  switch (value) {
+    case "case1":
+      print("Response for case1");
+      break;
+    case "case2":
+      print("Response for case2");
+      break;
+    default:
+      print("Default response");
+  }
+
+  // Using a while loop to print out the numbers from 20 to 10
+  int num = 20;
+  print("Numbers from 20 to 10:");
+  while (num >= 10) {
+    print(num);
+    num--;
+  }
+
+  // Using an if-else statement to check if a number is even or odd
+  void checkEvenOdd(int num) {
+    if (num % 2 == 0) {
+      print("$num is even");
+    } else {
+      print("$num is odd");
+    }
+  }
+
+  checkEvenOdd(7);
+  checkEvenOdd(10);
+
+  // Finding the largest number in a list
+  List<int> numbers = [3, 7, 2, 9, 5];
+  int largestNumber = numbers.reduce((value, element) => value > element ? value : element);
+  print("Largest number in the list is: $largestNumber");
+
+  // Using a try-catch block to catch an exception
+  try {
+    double result = 1 / 0; // Division by zero
+    print(result);
+  } catch (e) {
+    print("Error: $e");
+  }
+}
